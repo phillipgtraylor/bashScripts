@@ -1,0 +1,11 @@
+#!/bin/bash
+for element in `cat`; do
+#we store the inputs or "elements" into an 
+#array that were printed out above
+    declare -a array1=(${array1[*]} $element)
+done
+
+for var in ${array1[0]}; do
+    var2=${array1[@]/[[:upper:]]/.} 
+        echo $var2
+done
